@@ -177,7 +177,7 @@ var SCLS={'لم يبدأ':'s0','قيد التنفيذ':'s1','منجز':'s2'};
 
 function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on');},3800);}
 function busy(on,txt){$('#busy').hidden=!on;if(txt)$('#busyt').textContent=txt;}
-var API_URL='ضعي_هنا_رابط_التطبيق_المنتهي_بـ_exec';
+var API_URL='https://script.google.com/macros/s/AKfycbzN9Rcxjgmhg9lkGJpxHBit04niXN6IYsg2o0djHbBvfzi7HlGeELL0Q8l_E34McWpM/exec';
 function api(fn,args){
   if(!/^https:\/\/script\.google\.com\//.test(API_URL))return Promise.reject(new Error('لم يُضبط رابط الخادم بعد (API_URL)'));
   if(navigator.onLine===false)return Promise.reject(new Error('لا يوجد اتصال بالإنترنت'));
